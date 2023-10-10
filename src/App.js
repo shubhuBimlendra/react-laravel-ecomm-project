@@ -5,10 +5,10 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import MasterLayout from "./layouts/admin/MasterLayout";
 import Home from "./components/frontend/Home";
 import Login from "./components/frontend/auth/Login";
 import Register from "./components/frontend/auth/Register";
+import AdminPrivateRoute from "./AdminPrivateRoute.js";
 
 //to generate csrf tokens
 import axios from "axios";
@@ -46,12 +46,7 @@ function App() {
               <Register />
             )}
           </Route>
-          <Route
-            path="/admin"
-            name="Admin"
-            render={(props) => <MasterLayout {...props} />}
-            component={MasterLayout}
-          />
+          <AdminPrivateRoute path="/admin" name="Admin" />
         </Switch>
       </Router>
     </div>
