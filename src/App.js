@@ -9,6 +9,8 @@ import Home from "./components/frontend/Home";
 import Login from "./components/frontend/auth/Login";
 import Register from "./components/frontend/auth/Register";
 import AdminPrivateRoute from "./AdminPrivateRoute.js";
+import Page403 from "./components/errors/Page403.js";
+import Page404 from "./components/errors/Page404.js";
 
 //to generate csrf tokens
 import axios from "axios";
@@ -32,6 +34,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/403" component={Page403} />
+          <Route path="/404" component={Page404} />
           <Route path="/login">
             {localStorage.getItem("auth_token") ? (
               <Redirect to="/" />
