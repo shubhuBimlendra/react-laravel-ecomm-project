@@ -1,6 +1,7 @@
 import Dashboard from "../components/admin/Dashboard";
 import Profile from "../components/admin/Profile";
 import Category from "../components/admin/Category";
+import ViewCategory from "../components/admin/category/ViewCategory";
 
 const routes = [
   { path: "/admin", exact: true, name: "Admin" },
@@ -15,6 +16,12 @@ const routes = [
     exact: true,
     name: "Category",
     component: Category,
+  },
+  {
+    path: "/admin/view-category",
+    exact: true,
+    name: "ViewCategory",
+    component: ViewCategory,
   },
   { path: "/admin/profile", exact: true, name: "Profile", component: Profile },
 ];
