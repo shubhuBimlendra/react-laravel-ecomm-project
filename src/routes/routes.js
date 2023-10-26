@@ -2,6 +2,7 @@ import Dashboard from "../components/admin/Dashboard";
 import Profile from "../components/admin/Profile";
 import Category from "../components/admin/Category";
 import ViewCategory from "../components/admin/category/ViewCategory";
+import EditCategory from "../components/admin/category/EditCategory";
 
 const routes = [
   { path: "/admin", exact: true, name: "Admin" },
@@ -22,6 +23,12 @@ const routes = [
     exact: true,
     name: "ViewCategory",
     component: ViewCategory,
+  },
+  {
+    path: "/admin/edit-category/:id",
+    exact: true,
+    name: "EditCategory",
+    component: EditCategory,
   },
   { path: "/admin/profile", exact: true, name: "Profile", component: Profile },
 ];
