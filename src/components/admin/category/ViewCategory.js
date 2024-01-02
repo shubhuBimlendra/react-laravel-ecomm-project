@@ -19,7 +19,6 @@ function ViewCategory() {
   //Delete Category
   const deleteCategory = (e, id) => {
     e.preventDefault();
-
     const thisClicked = e.currentTarget;
     thisClicked.innerText = "Deleting";
 
