@@ -5,6 +5,7 @@ import ViewCategory from "../components/admin/category/ViewCategory";
 import EditCategory from "../components/admin/category/EditCategory";
 import AddProduct from "../components/admin/product/AddProduct";
 import ViewProduct from "../components/admin/product/ViewProduct";
+import EditProduct from "../components/admin/product/EditProduct";
 
 const routes = [
   { path: "/admin", exact: true, name: "Admin" },
@@ -43,6 +44,12 @@ const routes = [
     exact: true,
     name: "ViewProduct",
     component: ViewProduct,
+  },
+  {
+    path: "/admin/edit-product/:id",
+    exact: true,
+    name: "EditProduct",
+    component: EditProduct,
   },
   { path: "/admin/profile", exact: true, name: "Profile", component: Profile },
 ];

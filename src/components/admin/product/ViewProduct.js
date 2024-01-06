@@ -22,7 +22,7 @@ function ViewProduct() {
       return (
         <tr key={item.id}>
           <td>{item.id}</td>
-          <td>{item.category_id}</td>
+          <td>{item.category.name}</td>
           <td>{item.name}</td>
           <td>{item.selling_price}</td>
           <td>
@@ -33,7 +33,10 @@ function ViewProduct() {
             />
           </td>
           <td>
-            <Link to="edit-product" className="btn btn-success btn-sm">
+            <Link
+              to={`edit-product/${item.id}`}
+              className="btn btn-success btn-sm"
+            >
               Edit
             </Link>
           </td>
